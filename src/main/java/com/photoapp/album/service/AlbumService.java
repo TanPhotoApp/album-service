@@ -9,7 +9,7 @@ import java.util.List;
 public class AlbumService {
 
     public List<AlbumEntity> getAlbums(String userId) {
-        AlbumEntity album1 = AlbumEntity.builder()
+        var album1 = AlbumEntity.builder()
             .id(1L)
             .userId(userId)
             .albumId("album1Id")
@@ -17,7 +17,7 @@ public class AlbumService {
             .name("album 1 name")
             .build();
 
-        AlbumEntity album2 = AlbumEntity.builder()
+        var album2 = AlbumEntity.builder()
             .id(2L)
             .userId(userId)
             .albumId("album2Id")

@@ -4,11 +4,5 @@ server:
 spring:
   application:
     name: album-service
-
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8010/eureka
-  instance:
-    instance-id: ${spring.application.name}:${spring.instance-id:${random.value}}
-    prefer-ip-address: true
+  config:
+    import: optional:configserver:${SPRING_CLOUD_CONFIG_URI:http://localhost:8888}

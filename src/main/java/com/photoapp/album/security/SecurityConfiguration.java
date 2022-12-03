@@ -13,7 +13,7 @@ public class SecurityConfiguration {
         http
             .csrf().disable()
             .authorizeRequests()
-                .antMatchers("**/album/**", "/actuator/**").permitAll()
+                .antMatchers("/**/albums", "/actuator/**").permitAll()
                 .anyRequest().denyAll()
             .and()
             .httpBasic();
